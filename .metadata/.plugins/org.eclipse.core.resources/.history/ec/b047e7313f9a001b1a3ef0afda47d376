@@ -1,0 +1,9 @@
+package br.com.fiap.tds.dao;
+
+public interface GenericDao<E, K> {
+	void create(E entidade);
+	E read(K codigo);
+	void update(E entidade);
+	void delete(K codigo);
+
+}

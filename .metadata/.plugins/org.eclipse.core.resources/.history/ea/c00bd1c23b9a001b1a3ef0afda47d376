@@ -1,0 +1,6 @@
+package br.com.fiap.tds.entity;
+
+public class Cliente {
+	private int codigo;
+
+}

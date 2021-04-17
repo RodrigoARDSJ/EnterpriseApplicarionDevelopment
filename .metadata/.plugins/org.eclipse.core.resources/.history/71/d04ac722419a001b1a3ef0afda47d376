@@ -1,0 +1,17 @@
+package br.com.fiap.tds.dao.impl;
+
+import javax.persistence.EntityManager;
+
+public class GenericDaoImpl {
+	private EntityManager em;
+	private Class<E> clazz;
+	
+	public GenericDaoImpl(EntityManager em, Class<E> clazz) {
+		super();
+		this.em = em;
+		this.clazz = clazz;
+	}
+	
+	
+
+}

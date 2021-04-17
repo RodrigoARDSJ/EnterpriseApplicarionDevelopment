@@ -1,0 +1,13 @@
+package br.com.fiap.tds.dao;
+
+import br.com.fiap.tds.entity.Veiculo;
+
+public interface VeiculoDao {
+	void create(Veiculo veiculo);
+	void Veiculo(int codigo);
+	void update(Veiculo veiculo);
+	
+	
+	
+
+}

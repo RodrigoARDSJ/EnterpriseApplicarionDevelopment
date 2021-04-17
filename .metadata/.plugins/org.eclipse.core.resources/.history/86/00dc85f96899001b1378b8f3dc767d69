@@ -1,0 +1,26 @@
+package br.com.fiap.tds.entity;
+
+import java.util.Calendar;
+
+public class Motorista {
+	private int codigo;
+	private String nome;
+	private Calendar dataNascimento;
+	private byte[] carteira;
+	private Genero genero;
+	
+	public Motorista () {
+		
+	}
+	public Motorista(int codigo, String nome, Calendar dataNascimento, byte[] carteira, Genero genero) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.carteira = carteira;
+		this.genero = genero;
+	}
+	
+	
+
+}

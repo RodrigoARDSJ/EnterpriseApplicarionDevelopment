@@ -1,0 +1,9 @@
+package br.com.fiap.tds.entity;
+
+public class Pagamento {
+	private int codigo;
+	private int codigoCliente;
+	private int cartão;
+	private Metodo metodo;
+
+}

@@ -1,0 +1,8 @@
+package br.com.fiap.tds.exception;
+
+public class CommitException extends Exception {
+	public CommitException() {
+		super("Não foi possivel fazer o commit");
+	}
+
+}

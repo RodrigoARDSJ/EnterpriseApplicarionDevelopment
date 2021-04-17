@@ -1,0 +1,38 @@
+package br.com.fiap.tds.view;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
+import br.com.fiap.tds.dao.GenericDao;
+import br.com.fiap.tds.dao.impl.GenericDaoImpl;
+import br.com.fiap.tds.entity.Cliente;
+import br.com.fiap.tds.exception.CommitException;
+import br.com.fiap.tds.singleton.EntityManagerFactorySingleton;
+
+public class ClienteTeste {
+	public static void main(String[] args) {
+		EntityManagerFactory fabrica = EntityManagerFactorySingleton.getInstance();
+		EntityManager em = fabrica.createEntityManager();
+
+		GenericDao<Cliente, Integer> dao = new GenericDaoImpl<Cliente, Integer>(em) {};
+
+		Cliente cliente = 
+				new Cliente("Rodrigo Alexander", "513131541821", "rodrigo", "123456");
+		
+		try {
+			dao.create(cliente);
+			dao.commit();
+			System.out.println("Cliente cadastrado!");
+		} catch (CommitException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			cliente = dao.read(1);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

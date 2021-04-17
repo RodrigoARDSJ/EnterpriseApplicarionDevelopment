@@ -1,0 +1,13 @@
+package br.com.fiap.tds.view;
+
+import javax.persistence.EntityManagerFactory;
+
+import br.com.fiap.tds.singleton.EntityManagerFactorySingleton;
+
+public class GrupoChallengeTeste {
+	public static void main(String[] args) {
+		EntityManagerFactory = EntityManagerFactorySingleton.getInstance();
+		
+	}
+
+}

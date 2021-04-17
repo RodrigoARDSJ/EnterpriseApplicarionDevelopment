@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;META-INF&apos; to &apos;07-JPA-Relacionamento/src&apos;&#x0D;&#x0A;- Original project: &apos;06-JPA-DesignPatterns&apos;&#x0D;&#x0A;- Destination element: &apos;07-JPA-Relacionamento/src&apos;&#x0D;&#x0A;- Original element: &apos;META-INF&apos;" description="Copy folder" destination="=07-JPA-Relacionamento/src=/optional=/true=/=/maven.pomderived=/true=/" element1="src/META-INF" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1618354173746" units="0" version="1.0"/>
+</session>

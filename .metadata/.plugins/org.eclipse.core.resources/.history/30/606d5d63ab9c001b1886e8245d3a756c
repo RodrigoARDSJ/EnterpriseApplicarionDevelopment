@@ -1,0 +1,72 @@
+package br.com.fiap.tds.entity;
+
+import java.util.Calendar;
+
+public class Aluno {
+	private int codigo;
+	private String nome;
+	private Calendar dataNascimento;
+	private Genero genero;
+	private int codigoGrupo;
+
+	public Aluno(int codigo, String nome, Calendar dataNascimento, Genero genero, int codigoGrupo) {
+		super();
+		this.codigo = codigo;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.genero = genero;
+		this.codigoGrupo = codigoGrupo;
+	}
+
+	public Aluno(String nome, Calendar dataNascimento, Genero genero, int codigoGrupo) {
+		super();
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.genero = genero;
+		this.codigoGrupo = codigoGrupo;
+	}
+
+	public Aluno() {
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Calendar getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Calendar dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+	public int getCodigoGrupo() {
+		return codigoGrupo;
+	}
+
+	public void setCodigoGrupo(int codigoGrupo) {
+		this.codigoGrupo = codigoGrupo;
+	}
+
+}

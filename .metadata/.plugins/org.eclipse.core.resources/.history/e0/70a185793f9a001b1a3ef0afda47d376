@@ -1,5 +1,0 @@
-package br.com.fiap.tds.exception;
-
-public class EntityNotFoundExeption extends Exception {
-
-}

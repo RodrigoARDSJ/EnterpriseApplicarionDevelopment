@@ -1,5 +1,0 @@
-package br.com.fiap.tds.singleton;
-
-public class EntityManagerFactorySingleton {
-
-}

@@ -1,9 +1,0 @@
-package br.com.fiap.tds.entity;
-
-public class NanoCourse {
-	private int codigo;
-	private String nome;
-	private int creditos;
-	private Nivel nivel;
-
-}

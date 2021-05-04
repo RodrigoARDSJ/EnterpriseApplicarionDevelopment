@@ -7,6 +7,7 @@ eclipse.preferences.version=1
 equ.TexColor=236,228,126
 key.BibColor=255,0,127
 num.TexColor=196,140,255
+overriddenByCSS=,spe.TexColor,cmd.TexColor,equ.TexColor,com.TexColor,num.TexColor,str.BibColor,key.BibColor,typ.BibColor,sqr.TexColor,def.TexColor,verb.TexColor,def.BibColor,crl.TexColor,slc.BibColor,
 slc.BibColor=255,255,255
 spe.TexColor=255,255,255
 sqr.TexColor=121,171,255

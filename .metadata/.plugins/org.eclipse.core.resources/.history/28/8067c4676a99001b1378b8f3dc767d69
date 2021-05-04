@@ -1,5 +1,0 @@
-package br.com.fiap.tds.exeptions;
-
-public class VeiculoNotFoundExeption extends Exception {
-
-}

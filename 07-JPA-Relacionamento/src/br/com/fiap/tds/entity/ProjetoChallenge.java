@@ -2,8 +2,10 @@ package br.com.fiap.tds.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,52 +17,41 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "TB_PROJETO_CHALLENGE")
-@SequenceGenerator(allocationSize = 1, name = "projeto", sequenceName = "SQ_TB_PROJETO_CHALLENGE")
+@Table(name="TB_PROJETO_CHALLENGE")
+@SequenceGenerator(name="projeto", sequenceName = "SQ_TB_PROJETO_CHALLENGE", allocationSize = 1)
 public class ProjetoChallenge {
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "proejeto")
-	@Column(name = "cd_projeto", nullable = false)
+	@Column(name="cd_projeto")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "projeto")
 	private int codigo;
-
-	@Column(name = "nm_projeto", length = 80, nullable = false)
+	
+	@Column(name="nm_projeto", nullable = false, length = 80)
 	private String nome;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "dt_entrega", nullable = false)
+	
+	@Temporal(TemporalType.DATE)
+	@Column(name="dt_entrega", nullable = false)
 	private Calendar dataEntrega;
-
-	@Column(name = "vl_nota")
-	private float nota;
-
-	@Column(name = "ds_setor", length = 100)
+	
+	@Column(name="vl_nota")
+	private Float nota;
+	
+	@Column(name="ds_setor", length = 100)
 	private String setor;
-
-	@OneToOne
-	@JoinColumn(name = "cd_grupo", nullable = false)
+	
+	//Mapear o relacionamento um-para-um
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name="cd_grupo", nullable = false, unique = true)
 	private GrupoChallenge grupo;
+	
+	public ProjetoChallenge() {}
 
-	public ProjetoChallenge(int codigo, String nome, Calendar dataEntrega, float nota, String setor, GrupoChallenge grupo) {
-		super();
-		this.codigo = codigo;
+	public ProjetoChallenge(String nome, Calendar dataEntrega, Float nota, String setor, GrupoChallenge grupo) {
 		this.nome = nome;
 		this.dataEntrega = dataEntrega;
 		this.nota = nota;
 		this.setor = setor;
 		this.grupo = grupo;
-	}
-
-	public ProjetoChallenge(String nome, Calendar dataEntrega, float nota, String setor) {
-		super();
-		this.nome = nome;
-		this.dataEntrega = dataEntrega;
-		this.nota = nota;
-		this.setor = setor;;
-	}
-
-	public ProjetoChallenge() {
-		super();
 	}
 
 	public int getCodigo() {
@@ -87,11 +78,11 @@ public class ProjetoChallenge {
 		this.dataEntrega = dataEntrega;
 	}
 
-	public float getNota() {
+	public Float getNota() {
 		return nota;
 	}
 
-	public void setNota(float nota) {
+	public void setNota(Float nota) {
 		this.nota = nota;
 	}
 
@@ -103,12 +94,12 @@ public class ProjetoChallenge {
 		this.setor = setor;
 	}
 
-	public GrupoChallenge getCodigoGrupo() {
+	public GrupoChallenge getGrupo() {
 		return grupo;
 	}
 
-	public void setCodigoGrupo(GrupoChallenge grupo) {
+	public void setGrupo(GrupoChallenge grupo) {
 		this.grupo = grupo;
 	}
-
+	
 }

@@ -1,8 +1,0 @@
-package br.com.fiap.tds.entity;
-
-public class Snippet {
-	public static void main(String[] args) {
-		EntityNotFoundException
-	}
-}
-
